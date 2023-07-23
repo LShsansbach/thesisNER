@@ -23,7 +23,6 @@ dict_intins = input.dict_intins
 dict_intins2 = input.dict_intins2
 dict_intins3 = input.dict_intins3
 dict_sinint = [{v: k for k, v in d.items()} for d in dict_intins]
-dict_sinint2 = [{v: k for k, v in d.items()} for d in dict_intins2]
 
 
 # function
@@ -144,8 +143,6 @@ def save_data_to_txt(data: pd.DataFrame, save_path: str):
                 else:
                     f.write(" " + word)
             f.write("\n")
-            # python -m prodigy ner.manual train blank:de ../dataset/germaner/train.txt --label I-PER,I-ORG,I-LOC,B-PER,B-ORG,B-LOC
-            # python -m prodigy terms.to-patterns train --label I-PER,I-ORG,I-LOC,B-PER,B-ORG,B-LOC --spacy-model blank:de > ./train.jsonl
 
 
 # Ablauf

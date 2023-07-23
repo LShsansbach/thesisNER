@@ -28,7 +28,6 @@ def command_for_spacy(
     start_command = input.start_end_file(file="Train Spacy")
     if trf == "_crf":
         output = subprocess.check_output(
-            # f"python -m spacy {command} ../SpaCy/config{trf_add}.cfg --output ../result/model{trf}/{additional}{dataset} --paths.train ../dataset/SpaCy/{additional}{dataset}_train.spacy --paths.dev ../dataset/SpaCy/{dataset}_test.spacy{trf_two}"
             [
                 "python",
                 "-m",
@@ -45,7 +44,6 @@ def command_for_spacy(
         )
     else:
         output = subprocess.check_output(
-            # f"python -m spacy {command} ../SpaCy/config{trf_add}.cfg --output ../result/model{trf}/{additional}{dataset} --paths.train ../dataset/SpaCy/{additional}{dataset}_train.spacy --paths.dev ../dataset/SpaCy/{dataset}_test.spacy{trf_two}"
             [
                 "python",
                 "-m",

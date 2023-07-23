@@ -2,13 +2,10 @@
 
 
 test_index = 0
-test_sentence = "Hallo ich heiße ditschiu Louis aus Griechenland Spanien"  # "Ich heiße Lurch aus Schwerin" #
-test_snorkel = ""  # "snorkel_"
+test_sentence = "Hallo ich heiße Andi Max aus Spanien"
 
-# signs_to_remove = ["\]", "\[", "\{", "\}", "\*", "'"]  #   ,"\(", "\)"
 snorkel_active = True
 da_active = True
-tl_active = True
 transfer_learning_active = True
 comb_active = True
 
@@ -16,9 +13,9 @@ model = "model-best"  # "model-last" # "model-final"
 crf_on = False
 transformer_on = True
 
-entities_to_keep = ["PER", "LOC", "ORG", "Org"]  # "DAT", "OTH"
+entities_to_keep = ["PER", "LOC", "ORG", "Org"]
 random_state = 42
-number_of_data = None  # 1000  #
+number_of_data = None  # None means all data
 
 
 ################################ Add relevant data ################################
@@ -85,60 +82,6 @@ dict_intins3 = [
     }
 ]
 
-"""
-dataset = ["germaner", "germeval_14", "wikiann"]
-label = "ner_tags"
-text = "tokens"
-dict_intins = [
-    {
-        0: "B-LOC",
-        1: "B-ORG",
-        2: "B-OTH",
-        3: "B-PER",
-        4: "I-LOC",
-        5: "I-ORG",
-        6: "I-OTH",
-        7: "I-PER",
-        8: "O",
-    },
-    {
-        0: "O",
-        1: "B-LOC",
-        2: "I-LOC",
-        3: "B-LOCderiv",
-        4: "I-LOCderiv",
-        5: "B-LOCpart",
-        6: "I-LOCpart",
-        7: "B-ORG",
-        8: "I-ORG",
-        9: "B-ORGderiv",
-        10: "I-ORGderiv",
-        11: "B-ORGpart",
-        12: "I-ORGpart",
-        13: "B-PER",
-        14: "I-PER",
-        15: "B-PERderiv",
-        16: "I-PERderiv",
-        17: "B-PERpart",
-        18: "I-PERpart",
-        19: "B-OTH",
-        20: "I-OTH",
-        21: "B-OTHderiv",
-        22: "I-OTHderiv",
-        23: "B-OTHpart",
-        24: "I-OTHpart",
-    },
-    {
-        0: "O",
-        1: "B-PER",
-        2: "I-PER",
-        3: "B-Org",
-        4: "I-Org",
-        5: "B-LOC",
-        6: "I-LOC",
-    },
-]
-"""
 
 ################################ unchanged data ################################
 
@@ -146,17 +89,16 @@ dict_intins = [
 trf = "_trf"
 json_file = "../reporting/data.json"
 log = "../reporting/hist.log"
-synonym_path = f"../dataset/z_openthesaurus.txt"
+synonym_path = "../dataset/z_openthesaurus.txt"
 language = "de"
-# digits = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
 
 ################################ snorkel data ################################
 
 
-snorkel_epochs = 1000  # 500
-snorkel_log_freq = 100  # 50
-snorkel_seed = random_state  # 123
+snorkel_epochs = 1000
+snorkel_log_freq = 100
+snorkel_seed = random_state
 snorkel_label = "label_snorkel"
 
 
@@ -214,7 +156,7 @@ da_noSynonyms = [
 
 
 # https://huggingface.co/mschiesser/ner-bert-german
-transfer_language_model = "mschiesser/ner-bert-german"  # "fhswf/bert_de_ner"
+transfer_language_model = "mschiesser/ner-bert-german"
 transfer_label = "label_transfer"
 
 

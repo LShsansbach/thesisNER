@@ -93,14 +93,12 @@ def synonym_replacement(df: pd.DataFrame):
             sentence_add = sentence.copy()
             sentence_add[random_number] = random.choice(synonym).replace("\n", "")
             list_row[da_tokens] = sentence_add
-            # df = df.append(list_row, ignore_index=True)
             df = pd.concat([df, pd.DataFrame([list_row])], ignore_index=True)
     return df
 
 
 def switch_entities_from_external_list(df: pd.DataFrame, label: str, iterations: int):
     print("Switch Entities")
-    # int_init = random.choice(df.index)
     df_new = df[[label, sentences]]
     df_new[da_tokens] = df_new[sentences]
     for i in tqdm(range(iterations)):

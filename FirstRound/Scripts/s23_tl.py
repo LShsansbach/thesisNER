@@ -61,7 +61,6 @@ def transfer_learning(df: pd.DataFrame):
         predicted_tokens_classes = [
             model.config.id2label[t.item()] for t in predicted_token_class_ids[0]
         ]
-        # words = tokenized_input.word_ids()
         int_help = 0
         list_help = []
         list_label = []
@@ -74,9 +73,6 @@ def transfer_learning(df: pd.DataFrame):
                 int_help += 1
         result.append(list_label)
     df[transfer_label] = result
-    """assert all(
-        len(a) == len(b) for a, b in zip(df[label_spec], df["label_transfer"])
-        ), f"Längen stimmen nicht überein"""
     return df
 
 
@@ -97,14 +93,10 @@ def save_results(df: pd.DataFrame, choice: str, list_for_json: list):
     return list_for_json
 
 
-#############################################
-# Dictionairy anpassen
-#############################################
-
 # Ablauf
 if execute_transfer_learning:
     for num, choice in enumerate(dataset):
-        sinint = dict_sinint[num]  ###########
+        sinint = dict_sinint[num]
         df = pd.read_pickle(f"../output/df_{choice}.pkl")
         print(f"Dataset: {choice}, Rows: {len(df)}")
         df_trained = transfer_learning(df)
@@ -113,9 +105,7 @@ if execute_transfer_learning:
         for i in df_trained[transfer_label]:
             list_help_2 = []
             for j in i:
-                list_help_2.append(
-                    sinint[j]
-                )  # sinint_model ################## geht nicht mit WikiANN
+                list_help_2.append(sinint[j])
             list_help.append(list_help_2)
         df[transfer_label] = list_help
 

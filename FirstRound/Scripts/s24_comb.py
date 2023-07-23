@@ -18,7 +18,7 @@ import torch
 ##################### input
 comb_active = input.comb_active
 dataset = input.dataset
-label = input.label  # label_spec
+label = input.label
 text_sentence = input.text
 dict_intins = input.dict_intins
 synonym_path = input.synonym_path
@@ -43,7 +43,6 @@ signs = input.da_noSynonyms
 number_of_synReplacementCycles = input.da_number_of_synReplacementCycles
 # https://www.openthesaurus.de/about/api
 stop_words = stopwords.words("german")
-# warnings.filterwarnings("ignore")
 
 # transfer learning
 language_model = input.transfer_language_model
@@ -70,8 +69,6 @@ def lf_transfer_name(x):
 def lf_transfer_location(x):
     global count_lf
     global transfer_list
-    # transfer_entity = transfer_list[label][count_lf - 1]
-    # return LOCATION if transfer_entity == ("B-LOC" or "I-LOC") else ABSTAIN
     return (
         LOCATION
         if transfer_list[label][count_lf - 1] == ("B-LOC" or "I-LOC")
@@ -156,7 +153,7 @@ lfs = [
 
 # Snorkel functions
 def init_lf(sinint):
-    ABSTAIN = -1  # sinint["O"]
+    ABSTAIN = -1
     PERSON = sinint["B-PER"]
     LOCATION = sinint["B-LOC"]
     NONENTITY = sinint["O"]
@@ -202,7 +199,7 @@ def train_snorkel(df, cardinality, lfs, text_name=text_sentence, label_name=labe
     print("Weak Supervision")
     df = pd.DataFrame(df).rename(columns={text_name: "text"})
     df_bilou = bilou_from_list(df, label_name=label_name)
-    assert len(df_bilou) == len(  ###############################
+    assert len(df_bilou) == len(
         transfer_list
     ), f"df bilou: {len(df_bilou)}; Transfer list: {len(transfer_list)}"
     applier = PandasLFApplier(lfs)
@@ -223,7 +220,6 @@ def predict_snorkel(df, label_model, L_train, text_name=text_sentence, bool_oute
 
 
 def transform_labels(df):
-    # df[label_name] = df[label_name].apply(lambda x: [y.replace("B-", "").replace("I-", "").replace("L-", "") for y in x])
     for num, row in enumerate(df[snorkel_label]):
         ent_prev = sinint["O"]
         for num2, i in enumerate(row):
@@ -231,10 +227,6 @@ def transform_labels(df):
                 df[snorkel_label][num][num2] = sinint["I-" + intins[i].split("-")[1]]
             ent_prev = i
     return df
-
-
-########### Active Learning
-# Nothing
 
 
 ########### Data Augmentation
@@ -437,7 +429,6 @@ def get_synonym_file():
         lines = f.readlines()
         syn_list = [line.split(";") for line in lines]
     print(f"Länge z_openthesaurus.txt: {len(syn_list)}")
-    # delete between brackets
     for num, i in enumerate(syn_list):
         for num2, j in enumerate(i):
             if "(" in j:

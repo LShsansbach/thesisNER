@@ -25,7 +25,6 @@ def command_for_spacy(
     start_command = input.start_end_file(file="Evaluate Spacy")
     if trf == "_crf":
         output = subprocess.check_output(
-            # f"python -m spacy {command} ../result/model{trf}/{additional}{dataset}/{model} ../dataset/SpaCy/{path}_val.spacy"
             [
                 "python",
                 "-m",

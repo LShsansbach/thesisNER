@@ -2,10 +2,8 @@
 
 
 test_index = 0
-test_sentence = "Hallo ich heiße ditschiu Louis aus Griechenland Spanien"  # "Ich heiße Lurch aus Schwerin" #
-test_snorkel = ""  # "snorkel_"
+test_sentence = "Hallo ich heiße Andi Max aus Spanien"
 
-# signs_to_remove = ["\]", "\[", "\{", "\}", "\*", "'"]  #   ,"\(", "\)"
 snorkel_active = True
 da_active = True
 transfer_learning_active = True
@@ -15,9 +13,9 @@ model = "model-best"  # "model-last" # "model-final"
 crf_on = False
 transformer_on = True
 
-entities_to_keep = ["PER", "LOC", "ORG", "Org"]  # "DAT", "OTH"
+entities_to_keep = ["PER", "LOC", "ORG", "Org"]
 random_state = 42
-number_of_data = None  # 1000  #
+number_of_data = None  # None means all data
 
 
 ################################ Add relevant data ################################
@@ -47,17 +45,16 @@ dict_intins = [
 trf = "_trf"
 json_file = "../reporting/data.json"
 log = "../reporting/hist.log"
-synonym_path = f"../dataset/z_openthesaurus.txt"
+synonym_path = "../dataset/z_openthesaurus.txt"
 language = "de"
-# digits = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
 
 ################################ snorkel data ################################
 
 
-snorkel_epochs = 1000  # 500
-snorkel_log_freq = 100  # 50
-snorkel_seed = random_state  # 123
+snorkel_epochs = 1000
+snorkel_log_freq = 100
+snorkel_seed = random_state
 snorkel_label = "label_snorkel"
 
 
@@ -115,7 +112,7 @@ da_noSynonyms = [
 
 
 # https://huggingface.co/mschiesser/ner-bert-german
-transfer_language_model = "mschiesser/ner-bert-german"  # "fhswf/bert_de_ner"
+transfer_language_model = "mschiesser/ner-bert-german"
 transfer_label = "label_transfer"
 
 
