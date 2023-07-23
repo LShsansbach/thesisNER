@@ -1,87 +1,12 @@
-2023-06-17 11:50:34.725947: start s1_data.py
-2023-06-17 11:51:33.567058: start s1_data.py
-2023-06-17 11:52:03.403718: start master.py
-2023-06-17 11:52:03.413217: start s1_data.py
-2023-06-17 11:52:14.321089: end s1_data.py: duration 00:00:10.91
-2023-06-17 11:52:14.324175: start s21_snorkel.py
-2023-06-17 11:52:53.713786: end s21_snorkel.py: duration 00:00:39.39
-2023-06-17 11:52:53.717585: start s22_da.py
-2023-06-17 12:04:17.907145: start master.py
-2023-06-17 12:04:17.913641: start s1_data.py
-2023-06-17 12:04:27.186493: end s1_data.py: duration 00:00:9.27
-2023-06-17 12:04:27.189499: start s21_snorkel.py
-2023-06-17 12:06:57.072700: end s21_snorkel.py: duration 00:02:29.88
-2023-06-17 12:06:57.075897: start s22_da.py
-2023-06-17 23:55:09.421072: end s22_da.py: duration 11:48:12.34
-2023-06-17 23:55:09.423624: start s23_tl.py
-2023-06-18 07:49:36.661064: start s23_tl.py
-2023-06-18 07:56:29.122359: start master.py
-2023-06-18 07:56:29.130105: start s1_data.py
-2023-06-18 08:09:55.268456: end s1_data.py: duration 00:13:26.14
-2023-06-18 08:09:55.269332: start s21_snorkel.py
-2023-06-18 10:15:01.449743: end s21_snorkel.py: duration 02:05:6.18
-2023-06-18 10:15:01.450404: start s22_da.py
-2023-06-18 22:32:19.896561: end s22_da.py: duration 12:17:18.45
-2023-06-18 22:32:19.898264: start s23_tl.py
-2023-06-19 07:35:28.240284: start master.py
-2023-06-19 07:35:28.249070: start s1_data.py
-2023-06-19 07:57:40.874666: end s1_data.py: duration 00:22:12.63
-2023-06-19 07:57:40.875866: start s21_snorkel.py
-2023-06-19 10:10:55.251106: end s21_snorkel.py: duration 02:13:14.38
-2023-06-19 10:10:55.251960: start s22_da.py
-2023-06-19 21:00:51.032175: end s22_da.py: duration 10:49:55.78
-2023-06-19 21:00:51.033560: start s23_tl.py
-2023-06-19 22:33:56.595121: end s23_tl.py: duration 01:33:5.56
-2023-06-19 22:33:56.600610: start s24_comb.py
-2023-06-19 22:34:16.047756: start master.py
-2023-06-19 22:34:16.061935: start s22_da.py
-2023-06-20 08:44:28.916221: start master.py
-2023-06-20 08:44:28.923467: start s24_comb.py
-2023-06-23 03:32:47.796794: end s24_comb.py: duration 66:48:18.87
-2023-06-23 03:32:47.799960: start s3_prep.py
-2023-06-23 04:10:11.264902: end s3_prep.py: duration 00:37:23.46
-2023-06-23 04:10:11.268460: start s4_train.py
-2023-06-23 04:10:11.269108: start Train Spacy
-2023-06-23 04:54:27.391088: end Train Spacy: duration 00:44:16.12
-2023-06-23 04:54:27.391623: start Train Spacy
-2023-06-23 05:20:06.872832: end Train Spacy: duration 00:25:39.48
-2023-06-23 05:20:06.873367: start Train Spacy
-2023-06-23 06:26:19.109993: end Train Spacy: duration 01:06:12.24
-2023-06-23 06:26:19.110253: start Train Spacy
-2023-06-23 06:42:30.709657: end Train Spacy: duration 00:16:11.6
-2023-06-23 06:42:30.710054: start Train Spacy
-2023-06-23 07:10:41.935270: end Train Spacy: duration 00:28:11.23
-2023-06-23 07:10:41.947753: end s4_train.py: duration 03:00:30.68
-2023-06-23 07:10:41.949664: start s5_eval.py
-2023-06-23 07:10:41.949790: start Evaluate Spacy
-2023-06-23 07:11:03.349294: end Evaluate Spacy: duration 00:00:21.4
-2023-06-23 07:11:03.349607: start Evaluate Spacy
-2023-06-23 07:11:23.714671: end Evaluate Spacy: duration 00:00:20.36
-2023-06-23 07:11:23.715010: start Evaluate Spacy
-2023-06-23 07:11:43.764532: end Evaluate Spacy: duration 00:00:20.05
-2023-06-23 07:11:43.764852: start Evaluate Spacy
-2023-06-23 07:12:04.241472: end Evaluate Spacy: duration 00:00:20.48
-2023-06-23 07:12:04.241821: start Evaluate Spacy
-2023-06-23 07:12:24.836352: end Evaluate Spacy: duration 00:00:20.59
-2023-06-23 07:12:24.839408: end s5_eval.py: duration 00:01:42.89
-2023-06-23 07:12:24.843147: start sfinal_test.py
-2023-06-23 07:12:39.077741: end sfinal_test.py: duration 00:00:14.23
-2023-06-23 07:12:39.077881: end master.py: duration 70:28:10.16
-2023-06-26 16:40:59.484897: start master.py
-2023-06-26 16:40:59.491936: start s1_data.py
-2023-06-26 16:41:55.307564: start master.py
-2023-06-26 16:41:55.312899: start s1_data.py
-2023-06-26 16:45:13.619901: start master.py
-2023-06-26 16:45:13.625254: start s1_data.py
-2023-06-26 16:48:00.558955: start master.py
-2023-06-26 16:48:00.564115: start s1_data.py
-2023-06-26 16:50:09.686595: start master.py
-2023-06-26 16:50:09.691935: start s1_data.py
 2023-06-26 16:53:25.282012: start master.py
 2023-06-26 16:53:25.287496: start s1_data.py
 2023-06-26 17:06:40.626998: end s1_data.py: duration 00:13:15.34
+2023-06-19 07:57:40.875866: start s21_snorkel.py
+2023-06-19 10:10:55.251106: end s21_snorkel.py: duration 02:13:14.38
 2023-06-26 17:06:40.630447: start s22_da.py
 2023-06-27 18:56:07.354907: end s22_da.py: duration 25:49:26.72
+2023-06-19 21:00:51.033560: start s23_tl.py
+2023-06-19 22:33:56.595121: end s23_tl.py: duration 01:33:5.56
 2023-06-27 18:56:07.390962: start s24_comb.py
 2023-07-03 23:57:24.576326: end s24_comb.py: duration 149:01:17.19
 2023-07-03 23:57:24.583612: start s3_prep.py

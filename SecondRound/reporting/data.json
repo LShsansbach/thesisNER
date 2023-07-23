@@ -258,30 +258,6 @@
                 }
         },
         {
-                "dataset": "active_germaner",
-                "Aug_Data": [
-                        null
-                ],
-                "Combination": [
-                        null
-                ],
-                "Corpus_Data": [
-                        null
-                ],
-                "Train_TRF": [
-                        null
-                ],
-                "Meta_Train_TRF": [
-                        null
-                ],
-                "Evaluation_TRF": [
-                        null
-                ],
-                "TestModel_TRF": [
-                        null
-                ]
-        },
-        {
                 "dataset": "augmentation_germaner",
                 "Aug_Data": {
                         "Additional Data": 823760,
