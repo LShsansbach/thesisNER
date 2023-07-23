@@ -1,0 +1,1207 @@
+[
+        {
+                "dataset": "germaner",
+                "Snorkel_Data": [
+                        null
+                ],
+                "Transfer_Data": [
+                        null
+                ],
+                "Combination": [
+                        null
+                ],
+                "Corpus_Data": {
+                        "dataset": "germaner",
+                        "number_of_entities": 7,
+                        "number_of_sentences": 16998,
+                        "number_of_tokens": null,
+                        "number_of_tokens_with_entities": 311488,
+                        "form_of_entities": {
+                                "8": 291998,
+                                "0": 5409,
+                                "3": 5185,
+                                "1": 3241,
+                                "7": 2936,
+                                "5": 2016,
+                                "4": 703
+                        }
+                },
+                "Train_CRF": {
+                        "Output": "\u001b[38;5;4m\u2139 Saving to output directory: ../result/model_crf/germaner\u001b[0m\n\u001b[38;5;4m\u2139 Using CPU\u001b[0m\n\u001b[38;5;4m\u2139 To switch to GPU 0, use the option: --gpu-id 0\u001b[0m\n\u001b[1m\n=========================== Initializing pipeline ===========================\u001b[0m\n\u001b[38;5;2m\u2714 Initialized pipeline\u001b[0m\n\u001b[1m\n============================= Training pipeline =============================\u001b[0m\n\u001b[38;5;4m\u2139 Pipeline: ['tok2vec', 'ner']\u001b[0m\n\u001b[38;5;4m\u2139 Initial learn rate: 0.001\u001b[0m\nE    #       LOSS TOK2VEC  LOSS NER  ENTS_F  ENTS_P  ENTS_R  SCORE \n---  ------  ------------  --------  ------  ------  ------  ------\n  0       0          0.00     48.38    0.00    0.00    0.00    0.00\n  0     200         55.95   2578.01   34.48   42.92   28.81    0.34\n  0     400         77.52   2095.68   40.33   55.63   31.63    0.40\n  0     600        110.50   2225.11   46.25   61.69   37.00    0.46\n  0     800        150.62   2459.23   54.47   59.50   50.23    0.54\n  0    1000        194.71   2826.76   56.71   64.54   50.57    0.57\n  0    1200        241.30   3458.23   61.15   67.64   55.79    0.61\n  0    1400        279.45   3765.22   63.45   71.02   57.34    0.63\n  1    1600        343.56   3501.50   65.87   73.85   59.44    0.66\n  1    1800        472.84   4032.78   66.43   72.19   61.52    0.66\n  1    2000        564.27   4885.81   67.86   70.16   65.70    0.68\n  2    2200        674.06   3753.94   67.54   73.41   62.54    0.68\n\u001b[38;5;2m\u2714 Saved pipeline to output directory\u001b[0m\n../result/model_crf/germaner/model-last\n",
+                        "Dauer": 342.01805210113525
+                },
+                "Meta_Train_CRF": {
+                        "lang": "de",
+                        "name": "pipeline",
+                        "version": "0.0.0",
+                        "spacy_version": ">=3.5.3,<3.6.0",
+                        "description": "",
+                        "author": "",
+                        "email": "",
+                        "url": "",
+                        "license": "",
+                        "spacy_git_version": "Unknown",
+                        "vectors": {
+                                "width": 0,
+                                "vectors": 0,
+                                "keys": 0,
+                                "name": null,
+                                "mode": "default"
+                        },
+                        "labels": {
+                                "tok2vec": [],
+                                "ner": [
+                                        "B-LOC",
+                                        "B-ORG",
+                                        "B-PER",
+                                        "I-LOC",
+                                        "I-ORG",
+                                        "I-PER"
+                                ]
+                        },
+                        "pipeline": [
+                                "tok2vec",
+                                "ner"
+                        ],
+                        "components": [
+                                "tok2vec",
+                                "ner"
+                        ],
+                        "disabled": [],
+                        "performance": {
+                                "ents_f": 0.6785714286,
+                                "ents_p": 0.7016311735,
+                                "ents_r": 0.6569792109,
+                                "ents_per_type": {
+                                        "I-ORG": {
+                                                "p": 0.6666666667,
+                                                "r": 0.5555555556,
+                                                "f": 0.6060606061
+                                        },
+                                        "B-PER": {
+                                                "p": 0.6545048399,
+                                                "r": 0.7474489796,
+                                                "f": 0.6978959905
+                                        },
+                                        "B-LOC": {
+                                                "p": 0.7493261456,
+                                                "r": 0.6445131376,
+                                                "f": 0.6929788118
+                                        },
+                                        "I-PER": {
+                                                "p": 0.7522236341,
+                                                "r": 0.8680351906,
+                                                "f": 0.8059904697
+                                        },
+                                        "B-ORG": {
+                                                "p": 0.6958677686,
+                                                "r": 0.50968523,
+                                                "f": 0.5883997205
+                                        },
+                                        "I-LOC": {
+                                                "p": 0.5930232558,
+                                                "r": 0.31875,
+                                                "f": 0.4146341463
+                                        }
+                                },
+                                "tok2vec_loss": 564.2666015449,
+                                "ner_loss": 4885.8114108649
+                        }
+                },
+                "Train_TRF": {
+                        "Output": "\u001b[38;5;4m\u2139 Saving to output directory: ../result/model_trf/germaner\u001b[0m\n\u001b[38;5;4m\u2139 Using GPU: 0\u001b[0m\n\u001b[1m\n=========================== Initializing pipeline ===========================\u001b[0m\n\u001b[38;5;2m\u2714 Initialized pipeline\u001b[0m\n\u001b[1m\n============================= Training pipeline =============================\u001b[0m\n\u001b[38;5;4m\u2139 Pipeline: ['transformer', 'ner']\u001b[0m\n\u001b[38;5;4m\u2139 Initial learn rate: 0.0\u001b[0m\nE    #       LOSS TRANS...  LOSS NER  ENTS_F  ENTS_P  ENTS_R  SCORE \n---  ------  -------------  --------  ------  ------  ------  ------\n  0       0          21.78     45.25    2.28    1.23   16.53    0.02\n  0     200       23276.31  46032.00   85.70   88.55   83.03    0.86\n  1     400        1478.93   4474.32   87.14   88.99   85.36    0.87\n  2     600         971.51   2916.44   88.76   87.68   89.86    0.89\n  3     800         634.02   1918.21   87.78   88.10   87.46    0.88\n  4    1000         509.54   1448.82   88.77   88.01   89.54    0.89\n  5    1200         352.20    965.55   88.68   89.01   88.35    0.89\n  6    1400         284.37    762.49   88.40   89.10   87.72    0.88\n  7    1600         212.77    559.15   88.09   87.18   89.01    0.88\n  8    1800         196.85    507.06   87.87   86.73   89.03    0.88\n  9    2000         159.57    402.61   87.89   88.02   87.76    0.88\n 10    2200         144.23    374.03   88.92   87.91   89.94    0.89\n 10    2400         141.46    348.20   88.16   85.55   90.94    0.88\n 11    2600         114.18    299.45   88.08   89.26   86.93    0.88\n 12    2800         112.52    270.37   88.60   89.15   88.06    0.89\n 13    3000         122.80    279.10   87.84   87.37   88.31    0.88\n 14    3200          96.97    235.12   88.44   88.98   87.91    0.88\n 15    3400          98.20    233.47   87.97   88.94   87.02    0.88\n 16    3600          96.68    204.84   88.06   87.97   88.14    0.88\n 17    3800          84.87    186.83   88.23   87.28   89.20    0.88\n\u001b[38;5;2m\u2714 Saved pipeline to output directory\u001b[0m\n../result/model_trf/germaner/model-last\n",
+                        "Dauer": 2368.9736063480377
+                },
+                "Meta_Train_TRF": {
+                        "lang": "de",
+                        "name": "pipeline",
+                        "version": "0.0.0",
+                        "spacy_version": ">=3.5.3,<3.6.0",
+                        "description": "",
+                        "author": "",
+                        "email": "",
+                        "url": "",
+                        "license": "",
+                        "spacy_git_version": "Unknown",
+                        "vectors": {
+                                "width": 0,
+                                "vectors": 0,
+                                "keys": 0,
+                                "name": null,
+                                "mode": "default"
+                        },
+                        "labels": {
+                                "transformer": [],
+                                "ner": [
+                                        "B-LOC",
+                                        "B-ORG",
+                                        "B-PER",
+                                        "I-LOC",
+                                        "I-ORG",
+                                        "I-PER"
+                                ]
+                        },
+                        "pipeline": [
+                                "transformer",
+                                "ner"
+                        ],
+                        "components": [
+                                "transformer",
+                                "ner"
+                        ],
+                        "disabled": [],
+                        "performance": {
+                                "ents_f": 0.8891685016,
+                                "ents_p": 0.8791208791,
+                                "ents_r": 0.8994484514,
+                                "ents_per_type": {
+                                        "B-LOC": {
+                                                "p": 0.8895522388,
+                                                "r": 0.9211746522,
+                                                "f": 0.9050873197
+                                        },
+                                        "B-PER": {
+                                                "p": 0.8901185771,
+                                                "r": 0.9574829932,
+                                                "f": 0.9225727161
+                                        },
+                                        "I-PER": {
+                                                "p": 0.9479768786,
+                                                "r": 0.9618768328,
+                                                "f": 0.9548762737
+                                        },
+                                        "B-ORG": {
+                                                "p": 0.8188494492,
+                                                "r": 0.8099273608,
+                                                "f": 0.8143639684
+                                        },
+                                        "I-ORG": {
+                                                "p": 0.857400722,
+                                                "r": 0.8246527778,
+                                                "f": 0.8407079646
+                                        },
+                                        "I-LOC": {
+                                                "p": 0.7870967742,
+                                                "r": 0.7625,
+                                                "f": 0.7746031746
+                                        }
+                                },
+                                "transformer_loss": 144.226893046,
+                                "ner_loss": 374.032978395
+                        }
+                },
+                "Evaluation_CRF": {
+                        "Output": "\u001b[38;5;4m\u2139 Using CPU\u001b[0m\n\u001b[38;5;4m\u2139 To switch to GPU 0, use the option: --gpu-id 0\u001b[0m\n\u001b[1m\n================================== Results ==================================\u001b[0m\n\nTOK     100.00\nNER P   69.91 \nNER R   65.83 \nNER F   67.81 \nSPEED   4399  \n\n\u001b[1m\n=============================== NER (per type) ===============================\u001b[0m\n\n            P       R       F\nB-PER   65.51   75.36   70.09\nB-LOC   76.53   67.32   71.63\nB-ORG   66.61   49.40   56.73\nI-ORG   66.59   53.78   59.50\nI-PER   73.08   85.81   78.93\nI-LOC   61.54   28.37   38.83\n\n",
+                        "Dauer": 29.944187879562378
+                },
+                "Evaluation_TRF": {
+                        "Output": "\u001b[38;5;4m\u2139 Using GPU: 0\u001b[0m\n\u001b[1m\n================================== Results ==================================\u001b[0m\n\nTOK     100.00\nNER P   86.38 \nNER R   88.87 \nNER F   87.60 \nSPEED   9739  \n\n\u001b[1m\n=============================== NER (per type) ===============================\u001b[0m\n\n            P       R       F\nB-PER   87.64   95.16   91.24\nB-LOC   87.76   91.15   89.42\nB-ORG   81.61   78.26   79.90\nI-ORG   83.09   82.19   82.64\nI-PER   92.14   96.45   94.25\nI-LOC   73.88   70.21   72.00\n\n",
+                        "Dauer": 23.654672145843506
+                },
+                "TestModel_CRF": {
+                        "Dataset": "germaner",
+                        "Modell": "crf",
+                        "Satz": "Hallo ich hei\u00dfe ditschiu Louis aus Griechenland Spanien",
+                        "Entities": "(Hallo, Louis, Griechenland, Spanien)",
+                        "AnzahlEntities": 4,
+                        "EntitiesLabel": [
+                                "Entity 1: Hallo, B-PER",
+                                "Entity 2: Louis, B-PER",
+                                "Entity 3: Griechenland, B-LOC",
+                                "Entity 4: Spanien, B-LOC"
+                        ]
+                },
+                "TestModel_TRF": {
+                        "Dataset": "germaner",
+                        "Modell": "trf",
+                        "Satz": "Hallo ich hei\u00dfe ditschiu Louis aus Griechenland Spanien",
+                        "Entities": "(ditschiu, Louis, Griechenland, Spanien)",
+                        "AnzahlEntities": 4,
+                        "EntitiesLabel": [
+                                "Entity 1: ditschiu, B-PER",
+                                "Entity 2: Louis, I-PER",
+                                "Entity 3: Griechenland, B-LOC",
+                                "Entity 4: Spanien, B-LOC"
+                        ]
+                }
+        },
+        {
+                "dataset": "snorkel_germaner",
+                "Snorkel_Data": {
+                        "LabelingFunctions": 8,
+                        "Epochs": 1000,
+                        "Log_Freq": 100,
+                        "Seed": 42,
+                        "Applier": "PandasLFApplier",
+                        "Format": "Bilou",
+                        "Analysis": "                        j Polarity  Coverage  Overlaps  Conflicts\nlf_lookup_nonEntity     0      [8]  0.092651  0.003109   0.003109\nlf_lookup_firstname     1      [3]  0.018084  0.010935   0.000743\nlf_lookup_lastname      2      [3]  0.038425  0.016133   0.005942\nlf_lookup_city          3      [0]  0.005939  0.001812   0.001746\nlf_lookup_country       4      [0]  0.003916  0.000372   0.000320\nlf_lookup_street        5      [0]  0.001507  0.000905   0.000340\nlf_lookup_building      6      [0]  0.003158  0.001317   0.000749\nlf_lookup_organization  7      [1]  0.002181  0.000435   0.000435"
+                },
+                "Transfer_Data": [
+                        null
+                ],
+                "Combination": [
+                        null
+                ],
+                "Corpus_Data": {
+                        "dataset": "snorkel_germaner",
+                        "number_of_entities": 7,
+                        "number_of_sentences": 16998,
+                        "number_of_tokens": null,
+                        "number_of_tokens_with_entities": 311488,
+                        "form_of_entities": {
+                                "8": 256598,
+                                "3": 30210,
+                                "1": 18705,
+                                "0": 4157,
+                                "5": 923,
+                                "7": 629,
+                                "4": 266
+                        }
+                },
+                "Train_CRF": {
+                        "Output": "\u001b[38;5;4m\u2139 Saving to output directory: ../result/model_crf/snorkel_germaner\u001b[0m\n\u001b[38;5;4m\u2139 Using CPU\u001b[0m\n\u001b[38;5;4m\u2139 To switch to GPU 0, use the option: --gpu-id 0\u001b[0m\n\u001b[1m\n=========================== Initializing pipeline ===========================\u001b[0m\n\u001b[38;5;2m\u2714 Initialized pipeline\u001b[0m\n\u001b[1m\n============================= Training pipeline =============================\u001b[0m\n\u001b[38;5;4m\u2139 Pipeline: ['tok2vec', 'ner']\u001b[0m\n\u001b[38;5;4m\u2139 Initial learn rate: 0.001\u001b[0m\nE    #       LOSS TOK2VEC  LOSS NER  ENTS_F  ENTS_P  ENTS_R  SCORE \n---  ------  ------------  --------  ------  ------  ------  ------\n  0       0          0.00     52.38    2.59    1.43   13.36    0.03\n  0     200         85.93   3088.66    1.63    1.19    2.61    0.02\n  0     400        106.19   1964.54    1.50    1.05    2.59    0.01\n  0     600        118.29   2115.63    2.15    1.50    3.80    0.02\n  0     800        122.88   2122.28    2.18    1.49    4.07    0.02\n  0    1000        150.34   2339.48    2.42    1.68    4.31    0.02\n  0    1200        175.89   2670.41    2.36    1.65    4.16    0.02\n  0    1400        179.09   2806.90    2.53    1.75    4.52    0.03\n  1    1600        222.66   2408.19    2.77    1.93    4.94    0.03\n  1    1800        259.29   2542.81    2.91    2.01    5.28    0.03\n  1    2000        305.86   2960.68    2.84    1.96    5.18    0.03\n  2    2200        321.10   2030.07    2.90    1.99    5.32    0.03\n\u001b[38;5;2m\u2714 Saved pipeline to output directory\u001b[0m\n../result/model_crf/snorkel_germaner/model-last\n",
+                        "Dauer": 342.95942735671997
+                },
+                "Meta_Train_CRF": {
+                        "lang": "de",
+                        "name": "pipeline",
+                        "version": "0.0.0",
+                        "spacy_version": ">=3.5.3,<3.6.0",
+                        "description": "",
+                        "author": "",
+                        "email": "",
+                        "url": "",
+                        "license": "",
+                        "spacy_git_version": "Unknown",
+                        "vectors": {
+                                "width": 0,
+                                "vectors": 0,
+                                "keys": 0,
+                                "name": null,
+                                "mode": "default"
+                        },
+                        "labels": {
+                                "tok2vec": [],
+                                "ner": [
+                                        "B-LOC",
+                                        "B-ORG",
+                                        "B-PER",
+                                        "I-LOC",
+                                        "I-ORG",
+                                        "I-PER"
+                                ]
+                        },
+                        "pipeline": [
+                                "tok2vec",
+                                "ner"
+                        ],
+                        "components": [
+                                "tok2vec",
+                                "ner"
+                        ],
+                        "disabled": [],
+                        "performance": {
+                                "ents_f": 0.0290735011,
+                                "ents_p": 0.0200563834,
+                                "ents_r": 0.0528213831,
+                                "ents_per_type": {
+                                        "B-PER": {
+                                                "p": 0.0203759506,
+                                                "r": 0.1207482993,
+                                                "f": 0.0348680172
+                                        },
+                                        "B-ORG": {
+                                                "p": 0.0185810811,
+                                                "r": 0.093220339,
+                                                "f": 0.0309859155
+                                        },
+                                        "B-LOC": {
+                                                "p": 0.0171624714,
+                                                "r": 0.0115919629,
+                                                "f": 0.0138376384
+                                        },
+                                        "I-PER": {
+                                                "p": 0.0048780488,
+                                                "r": 0.0014662757,
+                                                "f": 0.0022547914
+                                        },
+                                        "I-ORG": {
+                                                "p": 0.0705882353,
+                                                "r": 0.0208333333,
+                                                "f": 0.0321715818
+                                        },
+                                        "I-LOC": {
+                                                "p": 0.0377358491,
+                                                "r": 0.0125,
+                                                "f": 0.0187793427
+                                        }
+                                },
+                                "tok2vec_loss": 259.2894112157,
+                                "ner_loss": 2542.8131751308
+                        }
+                },
+                "Train_TRF": {
+                        "Output": "\u001b[38;5;4m\u2139 Saving to output directory: ../result/model_trf/snorkel_germaner\u001b[0m\n\u001b[38;5;4m\u2139 Using GPU: 0\u001b[0m\n\u001b[1m\n=========================== Initializing pipeline ===========================\u001b[0m\n\u001b[38;5;2m\u2714 Initialized pipeline\u001b[0m\n\u001b[1m\n============================= Training pipeline =============================\u001b[0m\n\u001b[38;5;4m\u2139 Pipeline: ['transformer', 'ner']\u001b[0m\n\u001b[38;5;4m\u2139 Initial learn rate: 0.0\u001b[0m\nE    #       LOSS TRANS...  LOSS NER  ENTS_F  ENTS_P  ENTS_R  SCORE \n---  ------  -------------  --------  ------  ------  ------  ------\n  0       0          22.37     45.36    3.37    1.81   24.37    0.03\n  0     200       30872.08  58338.64    3.53    2.38    6.87    0.04\n  1     400        2935.89   7110.31    3.56    2.44    6.60    0.04\n  2     600        1560.29   4132.69    3.95    2.69    7.42    0.04\n  3     800        1019.36   2737.22    3.38    2.30    6.39    0.03\n  4    1000         673.27   1782.15    3.94    2.68    7.47    0.04\n  5    1200         494.21   1203.21    4.01    2.75    7.42    0.04\n  6    1400         379.79    943.67    4.05    2.76    7.62    0.04\n  7    1600         296.93    677.65    4.37    2.95    8.44    0.04\n  8    1800         248.07    568.17    4.34    2.96    8.17    0.04\n  9    2000         204.77    458.17    4.04    2.76    7.57    0.04\n 10    2200         167.53    375.04    3.83    2.62    7.15    0.04\n 10    2400         173.47    369.18    3.58    2.44    6.70    0.04\n 11    2600         148.28    301.11    4.24    2.89    7.96    0.04\n 12    2800         151.79    316.25    3.79    2.58    7.09    0.04\n 13    3000         129.64    269.44    3.79    2.58    7.15    0.04\n 14    3200         128.22    251.73    3.90    2.66    7.30    0.04\n\u001b[38;5;2m\u2714 Saved pipeline to output directory\u001b[0m\n../result/model_trf/snorkel_germaner/model-last\n",
+                        "Dauer": 2056.8503119945526
+                },
+                "Meta_Train_TRF": {
+                        "lang": "de",
+                        "name": "pipeline",
+                        "version": "0.0.0",
+                        "spacy_version": ">=3.5.3,<3.6.0",
+                        "description": "",
+                        "author": "",
+                        "email": "",
+                        "url": "",
+                        "license": "",
+                        "spacy_git_version": "Unknown",
+                        "vectors": {
+                                "width": 0,
+                                "vectors": 0,
+                                "keys": 0,
+                                "name": null,
+                                "mode": "default"
+                        },
+                        "labels": {
+                                "transformer": [],
+                                "ner": [
+                                        "B-LOC",
+                                        "B-ORG",
+                                        "B-PER",
+                                        "I-LOC",
+                                        "I-ORG",
+                                        "I-PER"
+                                ]
+                        },
+                        "pipeline": [
+                                "transformer",
+                                "ner"
+                        ],
+                        "components": [
+                                "transformer",
+                                "ner"
+                        ],
+                        "disabled": [],
+                        "performance": {
+                                "ents_f": 0.0437266535,
+                                "ents_p": 0.0295033358,
+                                "ents_r": 0.0844293594,
+                                "ents_per_type": {
+                                        "B-PER": {
+                                                "p": 0.0311921379,
+                                                "r": 0.1862244898,
+                                                "f": 0.0534341832
+                                        },
+                                        "B-ORG": {
+                                                "p": 0.0239848517,
+                                                "r": 0.1380145278,
+                                                "f": 0.040867539
+                                        },
+                                        "B-LOC": {
+                                                "p": 0.0154405086,
+                                                "r": 0.013137558,
+                                                "f": 0.0141962422
+                                        },
+                                        "I-LOC": {
+                                                "p": 0.0222222222,
+                                                "r": 0.00625,
+                                                "f": 0.0097560976
+                                        },
+                                        "I-PER": {
+                                                "p": 0.0176211454,
+                                                "r": 0.0058651026,
+                                                "f": 0.0088008801
+                                        },
+                                        "I-ORG": {
+                                                "p": 0.1253644315,
+                                                "r": 0.0746527778,
+                                                "f": 0.0935799782
+                                        }
+                                },
+                                "transformer_loss": 296.9291403725,
+                                "ner_loss": 677.6498859396
+                        }
+                },
+                "Evaluation_CRF": {
+                        "Output": "\u001b[38;5;4m\u2139 Using CPU\u001b[0m\n\u001b[38;5;4m\u2139 To switch to GPU 0, use the option: --gpu-id 0\u001b[0m\n\u001b[1m\n================================== Results ==================================\u001b[0m\n\nTOK     100.00\nNER P   1.97  \nNER R   5.30  \nNER F   2.87  \nSPEED   22421 \n\n\u001b[1m\n=============================== NER (per type) ===============================\u001b[0m\n\n           P       R      F\nB-PER   2.18   13.00   3.74\nB-ORG   1.63    8.21   2.72\nB-LOC   2.01    1.29   1.57\nI-PER   0.79    0.32   0.46\nI-ORG   3.55    1.08   1.66\nI-LOC   0.00    0.00   0.00\n\n",
+                        "Dauer": 15.234614610671997
+                },
+                "Evaluation_TRF": {
+                        "Output": "\u001b[38;5;4m\u2139 Using GPU: 0\u001b[0m\n\u001b[1m\n================================== Results ==================================\u001b[0m\n\nTOK     100.00\nNER P   2.76  \nNER R   8.07  \nNER F   4.12  \nSPEED   8008  \n\n\u001b[1m\n=============================== NER (per type) ===============================\u001b[0m\n\n           P       R      F\nB-PER   3.01   18.10   5.16\nB-ORG   2.49   14.49   4.25\nB-LOC   1.35    1.06   1.19\nI-PER   1.16    0.48   0.68\nI-ORG   7.36    4.32   5.44\nI-LOC   2.13    0.71   1.06\n\n",
+                        "Dauer": 27.56734037399292
+                },
+                "TestModel_CRF": {
+                        "Dataset": "snorkel_germaner",
+                        "Modell": "crf",
+                        "Satz": "Hallo ich hei\u00dfe ditschiu Louis aus Griechenland Spanien",
+                        "Entities": "(Louis, Griechenland, Spanien)",
+                        "AnzahlEntities": 3,
+                        "EntitiesLabel": [
+                                "Entity 1: Louis, B-ORG",
+                                "Entity 2: Griechenland, B-ORG",
+                                "Entity 3: Spanien, I-ORG"
+                        ]
+                },
+                "TestModel_TRF": {
+                        "Dataset": "snorkel_germaner",
+                        "Modell": "trf",
+                        "Satz": "Hallo ich hei\u00dfe ditschiu Louis aus Griechenland Spanien",
+                        "Entities": "(Louis, Griechenland, Spanien)",
+                        "AnzahlEntities": 3,
+                        "EntitiesLabel": [
+                                "Entity 1: Louis, B-LOC",
+                                "Entity 2: Griechenland, B-ORG",
+                                "Entity 3: Spanien, B-ORG"
+                        ]
+                }
+        },
+        {
+                "dataset": "active_germaner",
+                "Snorkel_Data": [
+                        null
+                ],
+                "Transfer_Data": [
+                        null
+                ],
+                "Combination": [
+                        null
+                ],
+                "Corpus_Data": [
+                        null
+                ],
+                "Train_CRF": [
+                        null
+                ],
+                "Meta_Train_CRF": [
+                        null
+                ],
+                "Train_TRF": [
+                        null
+                ],
+                "Meta_Train_TRF": [
+                        null
+                ],
+                "Evaluation_CRF": [
+                        null
+                ],
+                "Evaluation_TRF": [
+                        null
+                ],
+                "TestModel_CRF": [
+                        null
+                ],
+                "TestModel_TRF": [
+                        null
+                ]
+        },
+        {
+                "dataset": "augmentation_germaner",
+                "Snorkel_Data": [
+                        null
+                ],
+                "Transfer_Data": [
+                        null
+                ],
+                "Combination": [
+                        null
+                ],
+                "Corpus_Data": {
+                        "dataset": "da_germaner",
+                        "number_of_entities": 7,
+                        "number_of_sentences": 1250603,
+                        "number_of_tokens": null,
+                        "number_of_tokens_with_entities": 24015072,
+                        "form_of_entities": {
+                                "8": 22797529,
+                                "3": 393027,
+                                "0": 356952,
+                                "1": 181634,
+                                "7": 140817,
+                                "5": 105067,
+                                "4": 40046
+                        }
+                },
+                "Train_CRF": {
+                        "Output": "\u001b[38;5;4m\u2139 Saving to output directory: ../result/model_crf/da_germaner\u001b[0m\n\u001b[38;5;4m\u2139 Using CPU\u001b[0m\n\u001b[38;5;4m\u2139 To switch to GPU 0, use the option: --gpu-id 0\u001b[0m\n\u001b[1m\n=========================== Initializing pipeline ===========================\u001b[0m\n\u001b[38;5;2m\u2714 Initialized pipeline\u001b[0m\n\u001b[1m\n============================= Training pipeline =============================\u001b[0m\n\u001b[38;5;4m\u2139 Pipeline: ['tok2vec', 'ner']\u001b[0m\n\u001b[38;5;4m\u2139 Initial learn rate: 0.001\u001b[0m\nE    #       LOSS TOK2VEC  LOSS NER  ENTS_F  ENTS_P  ENTS_R  SCORE \n---  ------  ------------  --------  ------  ------  ------  ------\n  0       0          0.00     41.85    0.00    0.00    0.00    0.00\n  0     200         50.01   2142.95   10.65   33.19    6.34    0.11\n  0     400         94.89   1447.53   24.48   40.97   17.46    0.24\n  0     600        125.99   1343.65   23.15   33.40   17.71    0.23\n  0     800        165.70   1404.00   28.18   42.21   21.15    0.28\n  0    1000        207.29   1497.15   28.00   35.35   23.19    0.28\n  0    1200        231.34   1491.84   32.11   35.39   29.38    0.32\n  0    1400        272.89   1535.97   30.35   36.42   26.01    0.30\n  0    1600        317.59   1478.45   31.44   37.40   27.11    0.31\n  0    1800        350.16   1490.50   29.69   36.43   25.05    0.30\n  0    2000        399.17   1592.84   30.68   35.16   27.22    0.31\n  0    2200        422.34   1546.73   32.71   35.61   30.25    0.33\n  0    2400        466.23   1606.32   36.10   37.84   34.51    0.36\n  0    2600        459.53   1336.03   35.03   37.13   33.16    0.35\n  0    2800        456.96   1291.24   32.99   34.06   31.99    0.33\n  0    3000        431.90   1135.33   32.66   35.58   30.19    0.33\n  0    3200        438.08   1075.93   33.23   35.20   31.46    0.33\n  0    3400        426.82   1047.61   33.48   36.87   30.65    0.33\n  0    3600        406.89    900.38   35.76   38.56   33.35    0.36\n  0    3800        434.64    866.95   33.91   36.10   31.97    0.34\n  0    4000        439.78    812.14   33.90   32.70   35.19    0.34\n\u001b[38;5;2m\u2714 Saved pipeline to output directory\u001b[0m\n../result/model_crf/da_germaner/model-last\n",
+                        "Dauer": 1533.9982528686523
+                },
+                "Meta_Train_CRF": {
+                        "lang": "de",
+                        "name": "pipeline",
+                        "version": "0.0.0",
+                        "spacy_version": ">=3.5.3,<3.6.0",
+                        "description": "",
+                        "author": "",
+                        "email": "",
+                        "url": "",
+                        "license": "",
+                        "spacy_git_version": "Unknown",
+                        "vectors": {
+                                "width": 0,
+                                "vectors": 0,
+                                "keys": 0,
+                                "name": null,
+                                "mode": "default"
+                        },
+                        "labels": {
+                                "tok2vec": [],
+                                "ner": [
+                                        "B-LOC",
+                                        "B-ORG",
+                                        "B-PER",
+                                        "I-LOC",
+                                        "I-ORG",
+                                        "I-PER"
+                                ]
+                        },
+                        "pipeline": [
+                                "tok2vec",
+                                "ner"
+                        ],
+                        "components": [
+                                "tok2vec",
+                                "ner"
+                        ],
+                        "disabled": [],
+                        "performance": {
+                                "ents_f": 0.3609940093,
+                                "ents_p": 0.378372093,
+                                "ents_r": 0.3451421298,
+                                "ents_per_type": {
+                                        "I-ORG": {
+                                                "p": 0.2852631579,
+                                                "r": 0.4704861111,
+                                                "f": 0.3551769332
+                                        },
+                                        "B-PER": {
+                                                "p": 0.405782652,
+                                                "r": 0.3460884354,
+                                                "f": 0.3735658559
+                                        },
+                                        "I-LOC": {
+                                                "p": 0.3835616438,
+                                                "r": 0.175,
+                                                "f": 0.2403433476
+                                        },
+                                        "B-LOC": {
+                                                "p": 0.4178082192,
+                                                "r": 0.4242658423,
+                                                "f": 0.4210122699
+                                        },
+                                        "I-PER": {
+                                                "p": 0.6433566434,
+                                                "r": 0.2697947214,
+                                                "f": 0.3801652893
+                                        },
+                                        "B-ORG": {
+                                                "p": 0.2789317507,
+                                                "r": 0.2276029056,
+                                                "f": 0.2506666667
+                                        }
+                                },
+                                "tok2vec_loss": 466.2312833618,
+                                "ner_loss": 1606.3215702671
+                        }
+                },
+                "Train_TRF": {
+                        "Output": "\u001b[38;5;4m\u2139 Saving to output directory: ../result/model_trf/da_germaner\u001b[0m\n\u001b[38;5;4m\u2139 Using GPU: 0\u001b[0m\n\u001b[1m\n=========================== Initializing pipeline ===========================\u001b[0m\n\u001b[38;5;2m\u2714 Initialized pipeline\u001b[0m\n\u001b[1m\n============================= Training pipeline =============================\u001b[0m\n\u001b[38;5;4m\u2139 Pipeline: ['transformer', 'ner']\u001b[0m\n\u001b[38;5;4m\u2139 Initial learn rate: 0.0\u001b[0m\nE    #       LOSS TRANS...  LOSS NER  ENTS_F  ENTS_P  ENTS_R  SCORE \n---  ------  -------------  --------  ------  ------  ------  ------\n  0       0         309.15    247.30    2.28    1.23   16.53    0.02\n  0     200       22537.78  50070.09   64.70   70.47   59.80    0.65\n  0     400         870.36   6812.66   76.50   78.52   74.59    0.77\n  0     600         482.36   5697.49   75.96   74.30   77.70    0.76\n  0     800         343.35   5036.98   75.24   76.52   73.99    0.75\n  0    1000         311.58   4916.22   75.74   78.18   73.44    0.76\n  0    1200         299.78   4654.39   77.92   76.43   79.47    0.78\n  0    1400         229.23   4483.67   76.00   79.24   73.02    0.76\n  0    1600         222.54   4395.78   74.50   80.68   69.20    0.75\n  0    1800         191.30   4268.60   76.44   77.70   75.22    0.76\n  0    2000         187.10   4407.92   75.35   77.88   72.97    0.75\n  0    2200         202.13   4319.35   75.96   81.81   70.90    0.76\n  0    2400         195.87   4111.29   76.40   79.45   73.57    0.76\n  0    2600         149.05   3883.74   74.66   76.91   72.55    0.75\n  0    2800         145.41   3889.97   75.60   76.66   74.57    0.76\n\u001b[38;5;2m\u2714 Saved pipeline to output directory\u001b[0m\n../result/model_trf/da_germaner/model-last\n",
+                        "Dauer": 3008.950239419937
+                },
+                "Meta_Train_TRF": {
+                        "lang": "de",
+                        "name": "pipeline",
+                        "version": "0.0.0",
+                        "spacy_version": ">=3.5.3,<3.6.0",
+                        "description": "",
+                        "author": "",
+                        "email": "",
+                        "url": "",
+                        "license": "",
+                        "spacy_git_version": "Unknown",
+                        "vectors": {
+                                "width": 0,
+                                "vectors": 0,
+                                "keys": 0,
+                                "name": null,
+                                "mode": "default"
+                        },
+                        "labels": {
+                                "transformer": [],
+                                "ner": [
+                                        "B-LOC",
+                                        "B-ORG",
+                                        "B-PER",
+                                        "I-LOC",
+                                        "I-ORG",
+                                        "I-PER"
+                                ]
+                        },
+                        "pipeline": [
+                                "transformer",
+                                "ner"
+                        ],
+                        "components": [
+                                "transformer",
+                                "ner"
+                        ],
+                        "disabled": [],
+                        "performance": {
+                                "ents_f": 0.779199168,
+                                "ents_p": 0.7643338094,
+                                "ents_r": 0.7946542215,
+                                "ents_per_type": {
+                                        "B-PER": {
+                                                "p": 0.7893961708,
+                                                "r": 0.9115646259,
+                                                "f": 0.8460931334
+                                        },
+                                        "I-PER": {
+                                                "p": 0.8921282799,
+                                                "r": 0.8973607038,
+                                                "f": 0.8947368421
+                                        },
+                                        "B-LOC": {
+                                                "p": 0.7549435028,
+                                                "r": 0.8261205564,
+                                                "f": 0.7889298893
+                                        },
+                                        "B-ORG": {
+                                                "p": 0.6897856242,
+                                                "r": 0.6622276029,
+                                                "f": 0.6757257566
+                                        },
+                                        "I-ORG": {
+                                                "p": 0.7652173913,
+                                                "r": 0.6111111111,
+                                                "f": 0.6795366795
+                                        },
+                                        "I-LOC": {
+                                                "p": 0.5,
+                                                "r": 0.5875,
+                                                "f": 0.5402298851
+                                        }
+                                },
+                                "transformer_loss": 299.7786656232,
+                                "ner_loss": 4654.3946059282
+                        }
+                },
+                "Evaluation_CRF": {
+                        "Output": "\u001b[38;5;4m\u2139 Using CPU\u001b[0m\n\u001b[38;5;4m\u2139 To switch to GPU 0, use the option: --gpu-id 0\u001b[0m\n\u001b[1m\n================================== Results ==================================\u001b[0m\n\nTOK     100.00\nNER P   37.71 \nNER R   35.25 \nNER F   36.44 \nSPEED   21968 \n\n\u001b[1m\n=============================== NER (per type) ===============================\u001b[0m\n\n            P       R       F\nB-ORG   25.95   20.65   23.00\nI-ORG   28.39   47.12   35.43\nI-PER   60.14   27.74   37.97\nB-PER   39.94   35.09   37.36\nB-LOC   44.07   44.93   44.49\nI-LOC   27.47   17.73   21.55\n\n",
+                        "Dauer": 14.96833324432373
+                },
+                "Evaluation_TRF": {
+                        "Output": "\u001b[38;5;4m\u2139 Using GPU: 0\u001b[0m\n\u001b[1m\n================================== Results ==================================\u001b[0m\n\nTOK     100.00\nNER P   74.59 \nNER R   79.57 \nNER F   77.00 \nSPEED   8051  \n\n\u001b[1m\n=============================== NER (per type) ===============================\u001b[0m\n\n            P       R       F\nB-PER   76.16   90.40   82.67\nB-LOC   73.18   82.15   77.41\nB-ORG   68.82   64.25   66.46\nI-ORG   75.95   64.75   69.90\nI-PER   86.48   90.81   88.59\nI-LOC   51.43   63.83   56.96\n\n",
+                        "Dauer": 27.28204917907715
+                },
+                "TestModel_CRF": {
+                        "Dataset": "da_germaner",
+                        "Modell": "crf",
+                        "Satz": "Hallo ich hei\u00dfe ditschiu Louis aus Griechenland Spanien",
+                        "Entities": "(Griechenland, Spanien)",
+                        "AnzahlEntities": 2,
+                        "EntitiesLabel": [
+                                "Entity 1: Griechenland, B-PER",
+                                "Entity 2: Spanien, I-PER"
+                        ]
+                },
+                "TestModel_TRF": {
+                        "Dataset": "da_germaner",
+                        "Modell": "trf",
+                        "Satz": "Hallo ich hei\u00dfe ditschiu Louis aus Griechenland Spanien",
+                        "Entities": "(ditschiu, Louis, Griechenland, Spanien)",
+                        "AnzahlEntities": 4,
+                        "EntitiesLabel": [
+                                "Entity 1: ditschiu, B-PER",
+                                "Entity 2: Louis, I-PER",
+                                "Entity 3: Griechenland, B-LOC",
+                                "Entity 4: Spanien, I-PER"
+                        ]
+                }
+        },
+        {
+                "dataset": "transfer_germaner",
+                "Snorkel_Data": [
+                        null
+                ],
+                "Transfer_Data": {
+                        "Language_Model": "mschiesser/ner-bert-german",
+                        "Labels_capability": {
+                                "B-LOC": 5,
+                                "B-ORG": 3,
+                                "B-PER": 1,
+                                "I-LOC": 6,
+                                "I-ORG": 4,
+                                "I-PER": 2,
+                                "O": 0
+                        }
+                },
+                "Combination": [
+                        null
+                ],
+                "Corpus_Data": {
+                        "dataset": "transfer_germaner",
+                        "number_of_entities": 7,
+                        "number_of_sentences": 16998,
+                        "number_of_tokens": null,
+                        "number_of_tokens_with_entities": 311463,
+                        "form_of_entities": {
+                                "8": 274686,
+                                "1": 11739,
+                                "0": 7242,
+                                "5": 6687,
+                                "3": 5389,
+                                "7": 4087,
+                                "4": 1633
+                        }
+                },
+                "Train_CRF": {
+                        "Output": "\u001b[38;5;4m\u2139 Saving to output directory: ../result/model_crf/transfer_germaner\u001b[0m\n\u001b[38;5;4m\u2139 Using CPU\u001b[0m\n\u001b[38;5;4m\u2139 To switch to GPU 0, use the option: --gpu-id 0\u001b[0m\n\u001b[1m\n=========================== Initializing pipeline ===========================\u001b[0m\n\u001b[38;5;2m\u2714 Initialized pipeline\u001b[0m\n\u001b[1m\n============================= Training pipeline =============================\u001b[0m\n\u001b[38;5;4m\u2139 Pipeline: ['tok2vec', 'ner']\u001b[0m\n\u001b[38;5;4m\u2139 Initial learn rate: 0.001\u001b[0m\nE    #       LOSS TOK2VEC  LOSS NER  ENTS_F  ENTS_P  ENTS_R  SCORE \n---  ------  ------------  --------  ------  ------  ------  ------\n  0       0          0.00     49.88    0.00    0.00    0.00    0.00\n  0     200         67.61   4118.29   21.50   31.86   16.23    0.22\n  0     400        110.31   3862.46   32.84   38.72   28.51    0.33\n  0     600        168.09   4567.84   39.93   38.08   41.96    0.40\n  0     800        218.45   5281.22   39.56   33.46   48.37    0.40\n  0    1000        279.82   6230.49   44.09   37.25   54.01    0.44\n  0    1200        349.32   7412.49   50.36   47.13   54.05    0.50\n  0    1400        432.91   8773.77   50.34   46.37   55.07    0.50\n  1    1600        596.29   9379.70   48.33   40.51   59.89    0.48\n  1    1800        831.29  10860.55   49.57   42.98   58.55    0.50\n  1    2000       1022.02  13212.42   49.11   40.79   61.69    0.49\n  2    2200       1396.17  12716.04   47.78   39.50   60.46    0.48\n\u001b[38;5;2m\u2714 Saved pipeline to output directory\u001b[0m\n../result/model_crf/transfer_germaner/model-last\n",
+                        "Dauer": 354.38307213783264
+                },
+                "Meta_Train_CRF": {
+                        "lang": "de",
+                        "name": "pipeline",
+                        "version": "0.0.0",
+                        "spacy_version": ">=3.5.3,<3.6.0",
+                        "description": "",
+                        "author": "",
+                        "email": "",
+                        "url": "",
+                        "license": "",
+                        "spacy_git_version": "Unknown",
+                        "vectors": {
+                                "width": 0,
+                                "vectors": 0,
+                                "keys": 0,
+                                "name": null,
+                                "mode": "default"
+                        },
+                        "labels": {
+                                "tok2vec": [],
+                                "ner": [
+                                        "B-LOC",
+                                        "B-ORG",
+                                        "B-PER",
+                                        "I-LOC",
+                                        "I-ORG",
+                                        "I-PER"
+                                ]
+                        },
+                        "pipeline": [
+                                "tok2vec",
+                                "ner"
+                        ],
+                        "components": [
+                                "tok2vec",
+                                "ner"
+                        ],
+                        "disabled": [],
+                        "performance": {
+                                "ents_f": 0.5035573123,
+                                "ents_p": 0.4713281539,
+                                "ents_r": 0.5405176071,
+                                "ents_per_type": {
+                                        "B-ORG": {
+                                                "p": 0.3716517857,
+                                                "r": 0.4031476998,
+                                                "f": 0.3867595819
+                                        },
+                                        "I-ORG": {
+                                                "p": 0.3202479339,
+                                                "r": 0.5381944444,
+                                                "f": 0.4015544041
+                                        },
+                                        "B-PER": {
+                                                "p": 0.637709773,
+                                                "r": 0.5493197279,
+                                                "f": 0.5902238465
+                                        },
+                                        "I-PER": {
+                                                "p": 0.482671175,
+                                                "r": 0.8372434018,
+                                                "f": 0.6123324397
+                                        },
+                                        "I-LOC": {
+                                                "p": 0.1818181818,
+                                                "r": 0.0875,
+                                                "f": 0.1181434599
+                                        },
+                                        "B-LOC": {
+                                                "p": 0.5311268716,
+                                                "r": 0.5208655332,
+                                                "f": 0.5259461568
+                                        }
+                                },
+                                "tok2vec_loss": 349.3169880217,
+                                "ner_loss": 7412.4898357701
+                        }
+                },
+                "Train_TRF": {
+                        "Output": "\u001b[38;5;4m\u2139 Saving to output directory: ../result/model_trf/transfer_germaner\u001b[0m\n\u001b[38;5;4m\u2139 Using GPU: 0\u001b[0m\n\u001b[1m\n=========================== Initializing pipeline ===========================\u001b[0m\n\u001b[38;5;2m\u2714 Initialized pipeline\u001b[0m\n\u001b[1m\n============================= Training pipeline =============================\u001b[0m\n\u001b[38;5;4m\u2139 Pipeline: ['transformer', 'ner']\u001b[0m\n\u001b[38;5;4m\u2139 Initial learn rate: 0.0\u001b[0m\nE    #       LOSS TRANS...  LOSS NER  ENTS_F  ENTS_P  ENTS_R  SCORE \n---  ------  -------------  --------  ------  ------  ------  ------\n  0       0          21.68     44.28    1.49    0.80   10.76    0.01\n  0     200       28151.55  58952.16   56.04   42.25   83.20    0.56\n  1     400        5365.80  15340.84   55.68   43.02   78.91    0.56\n  2     600        3962.63  11245.80   54.03   41.55   77.22    0.54\n  3     800        2870.24   7940.55   55.48   43.18   77.56    0.55\n  4    1000        2192.99   5930.96   56.03   43.92   77.37    0.56\n  5    1200        1598.55   4102.31   55.45   42.81   78.70    0.55\n  6    1400        1305.65   3266.44   55.63   42.87   79.21    0.56\n  7    1600        1087.65   2538.80   56.23   43.73   78.74    0.56\n  8    1800         874.52   2013.38   57.40   45.47   77.81    0.57\n  9    2000         697.43   1589.77   55.73   43.23   78.40    0.56\n 10    2200         631.43   1395.13   53.83   40.96   78.49    0.54\n 10    2400         518.06   1099.98   56.22   43.79   78.51    0.56\n 11    2600         480.85    979.64   54.82   42.10   78.57    0.55\n 12    2800         418.78    861.76   54.16   41.69   77.28    0.54\n 13    3000         397.63    813.85   55.21   42.79   77.79    0.55\n 14    3200         379.92    766.76   54.56   41.70   78.89    0.55\n 15    3400         301.67    588.78   55.34   42.72   78.53    0.55\n\u001b[38;5;2m\u2714 Saved pipeline to output directory\u001b[0m\n../result/model_trf/transfer_germaner/model-last\n",
+                        "Dauer": 2213.4321172237396
+                },
+                "Meta_Train_TRF": {
+                        "lang": "de",
+                        "name": "pipeline",
+                        "version": "0.0.0",
+                        "spacy_version": ">=3.5.3,<3.6.0",
+                        "description": "",
+                        "author": "",
+                        "email": "",
+                        "url": "",
+                        "license": "",
+                        "spacy_git_version": "Unknown",
+                        "vectors": {
+                                "width": 0,
+                                "vectors": 0,
+                                "keys": 0,
+                                "name": null,
+                                "mode": "default"
+                        },
+                        "labels": {
+                                "transformer": [],
+                                "ner": [
+                                        "B-LOC",
+                                        "B-ORG",
+                                        "B-PER",
+                                        "I-LOC",
+                                        "I-ORG",
+                                        "I-PER"
+                                ]
+                        },
+                        "pipeline": [
+                                "transformer",
+                                "ner"
+                        ],
+                        "components": [
+                                "transformer",
+                                "ner"
+                        ],
+                        "disabled": [],
+                        "performance": {
+                                "ents_f": 0.5740219092,
+                                "ents_p": 0.4547483263,
+                                "ents_r": 0.7781077641,
+                                "ents_per_type": {
+                                        "B-ORG": {
+                                                "p": 0.2352211658,
+                                                "r": 0.6888619855,
+                                                "f": 0.3506933744
+                                        },
+                                        "I-ORG": {
+                                                "p": 0.318537859,
+                                                "r": 0.8472222222,
+                                                "f": 0.4629981025
+                                        },
+                                        "B-PER": {
+                                                "p": 0.7878006873,
+                                                "r": 0.7797619048,
+                                                "f": 0.7837606838
+                                        },
+                                        "I-PER": {
+                                                "p": 0.6714140387,
+                                                "r": 0.9677419355,
+                                                "f": 0.7927927928
+                                        },
+                                        "B-LOC": {
+                                                "p": 0.6032154341,
+                                                "r": 0.7248840804,
+                                                "f": 0.6584766585
+                                        },
+                                        "I-LOC": {
+                                                "p": 0.2324455206,
+                                                "r": 0.6,
+                                                "f": 0.335078534
+                                        }
+                                },
+                                "transformer_loss": 874.5210947442,
+                                "ner_loss": 2013.3813301881
+                        }
+                },
+                "Evaluation_CRF": {
+                        "Output": "\u001b[38;5;4m\u2139 Using CPU\u001b[0m\n\u001b[38;5;4m\u2139 To switch to GPU 0, use the option: --gpu-id 0\u001b[0m\n\u001b[1m\n================================== Results ==================================\u001b[0m\n\nTOK     100.00\nNER P   45.60 \nNER R   53.53 \nNER F   49.25 \nSPEED   14693 \n\n\u001b[1m\n=============================== NER (per type) ===============================\u001b[0m\n\n            P       R       F\nB-ORG   33.30   39.13   35.98\nI-ORG   30.84   54.86   39.48\nB-PER   62.18   54.21   57.92\nI-PER   46.94   84.19   60.28\nB-LOC   53.22   51.89   52.55\nI-LOC   17.46    7.80   10.78\n\n",
+                        "Dauer": 17.842397212982178
+                },
+                "Evaluation_TRF": {
+                        "Output": "\u001b[38;5;4m\u2139 Using GPU: 0\u001b[0m\n\u001b[1m\n================================== Results ==================================\u001b[0m\n\nTOK     100.00\nNER P   44.18 \nNER R   76.72 \nNER F   56.07 \nSPEED   7844  \n\n\u001b[1m\n=============================== NER (per type) ===============================\u001b[0m\n\n            P       R       F\nB-LOC   57.13   71.56   63.53\nB-ORG   24.07   70.65   35.91\nB-PER   77.67   74.17   75.88\nI-ORG   31.52   84.53   45.92\nI-LOC   21.68   60.28   31.89\nI-PER   62.20   97.42   75.93\n\n",
+                        "Dauer": 26.77190899848938
+                },
+                "TestModel_CRF": {
+                        "Dataset": "transfer_germaner",
+                        "Modell": "crf",
+                        "Satz": "Hallo ich hei\u00dfe ditschiu Louis aus Griechenland Spanien",
+                        "Entities": "(Griechenland, Spanien)",
+                        "AnzahlEntities": 2,
+                        "EntitiesLabel": [
+                                "Entity 1: Griechenland, B-LOC",
+                                "Entity 2: Spanien, B-LOC"
+                        ]
+                },
+                "TestModel_TRF": {
+                        "Dataset": "transfer_germaner",
+                        "Modell": "trf",
+                        "Satz": "Hallo ich hei\u00dfe ditschiu Louis aus Griechenland Spanien",
+                        "Entities": "(Louis, Griechenland, Spanien)",
+                        "AnzahlEntities": 3,
+                        "EntitiesLabel": [
+                                "Entity 1: Louis, I-PER",
+                                "Entity 2: Griechenland, B-LOC",
+                                "Entity 3: Spanien, B-LOC"
+                        ]
+                }
+        },
+        {
+                "dataset": "combination_germaner",
+                "Snorkel_Data": [
+                        null
+                ],
+                "Transfer_Data": [
+                        null
+                ],
+                "Combination": {
+                        "Dataset": "germaner",
+                        "Snorkel": {
+                                "LabelingFunctions": 12,
+                                "Epochs": 1000,
+                                "Log_Freq": 100,
+                                "Seed": 42,
+                                "Applier": "PandasLFApplier",
+                                "Format": "Bilou",
+                                "Analysis": "                           j Polarity  Coverage  Overlaps  Conflicts\nlf_nonEntity               0      [8]  0.005939  0.005161   0.005011\nlf_transfer_name           1      [3]  0.017499  0.011949   0.011938\nlf_transfer_location       2      [0]  0.023340  0.008794   0.008667\nlf_transfer_organization   3      [1]  0.038796  0.006158   0.003155\nlf_transfer_nonEntity      4      [8]  0.872022  0.138642   0.138493\nlf_lookup_firstname        5      [3]  0.003873  0.003636   0.003634\nlf_lookup_lastname         6      [3]  0.092651  0.092095   0.092086\nlf_lookup_city             7      [0]  0.003158  0.002933   0.002769\nlf_lookup_country          8      [0]  0.002181  0.001611   0.001599\nlf_lookup_street           9      [0]  0.053863  0.052763   0.052665\nlf_lookup_building        10      [0]  0.001507  0.001493   0.001337\nlf_lookup_organization    11      [1]  0.069470  0.060638   0.057635"
+                        },
+                        "Active_Learning": null,
+                        "Data Augmentation": {
+                                "Additional Data": 1830695,
+                                "Deleted Duplicates": 369512,
+                                "Synonym Replacement Cycles": 10,
+                                "Entity Swapping numeber": 10000,
+                                "Total": 1849035
+                        },
+                        "Transfer Learning": {
+                                "Language Model": "mschiesser/ner-bert-german",
+                                "Labels_capability": {
+                                        "B-LOC": 5,
+                                        "B-ORG": 3,
+                                        "B-PER": 1,
+                                        "I-LOC": 6,
+                                        "I-ORG": 4,
+                                        "I-PER": 2,
+                                        "O": 0
+                                }
+                        }
+                },
+                "Corpus_Data": {
+                        "dataset": "comb_germaner",
+                        "number_of_entities": 7,
+                        "number_of_sentences": 1849035,
+                        "number_of_tokens": null,
+                        "number_of_tokens_with_entities": 33700264,
+                        "form_of_entities": {
+                                "8": 26498019,
+                                "3": 3222179,
+                                "1": 2925918,
+                                "0": 717705,
+                                "5": 222623,
+                                "7": 92589,
+                                "4": 21231
+                        }
+                },
+                "Train_CRF": {
+                        "Output": "\u001b[38;5;4m\u2139 Saving to output directory: ../result/model_crf/comb_germaner\u001b[0m\n\u001b[38;5;4m\u2139 Using CPU\u001b[0m\n\u001b[38;5;4m\u2139 To switch to GPU 0, use the option: --gpu-id 0\u001b[0m\n\u001b[1m\n=========================== Initializing pipeline ===========================\u001b[0m\n\u001b[38;5;2m\u2714 Initialized pipeline\u001b[0m\n\u001b[1m\n============================= Training pipeline =============================\u001b[0m\n\u001b[38;5;4m\u2139 Pipeline: ['tok2vec', 'ner']\u001b[0m\n\u001b[38;5;4m\u2139 Initial learn rate: 0.001\u001b[0m\nE    #       LOSS TOK2VEC  LOSS NER  ENTS_F  ENTS_P  ENTS_R  SCORE \n---  ------  ------------  --------  ------  ------  ------  ------\n  0       0          0.00     48.77    0.00    0.00    0.00    0.00\n  0     200         87.98   4335.61    5.04    3.45    9.33    0.05\n  0     400        105.66   3619.16    5.75    3.84   11.41    0.06\n  0     600        139.72   4231.37    5.90    3.98   11.41    0.06\n  0     800        183.48   4653.83    7.38    4.72   16.80    0.07\n  0    1000        223.78   5443.31    7.87    5.19   16.25    0.08\n  0    1200        259.61   6202.25    7.85    5.17   16.31    0.08\n  0    1400        331.11   7298.43    7.84    5.19   16.02    0.08\n  0    1600        406.99   8384.48    8.23    5.40   17.35    0.08\n  0    1800        509.69   9516.01    8.45    5.50   18.24    0.08\n  0    2000        633.22  10933.90    8.90    5.82   18.94    0.09\n  0    2200        752.86  12405.81    8.46    5.49   18.41    0.08\n  0    2400        940.11  14458.47    8.15    5.29   17.80    0.08\n  0    2600        976.59  13749.00    8.49    5.53   18.29    0.08\n  0    2800        994.01  13275.03    8.75    5.64   19.47    0.09\n  0    3000       1016.06  12656.57    8.64    5.57   19.30    0.09\n  0    3200       1041.78  12122.25    8.75    5.74   18.46    0.09\n  0    3400       1064.15  11884.44    8.86    5.71   19.75    0.09\n  0    3600       1070.50  11418.18    8.45    5.45   18.77    0.08\n\u001b[38;5;2m\u2714 Saved pipeline to output directory\u001b[0m\n../result/model_crf/comb_germaner/model-last\n",
+                        "Dauer": 1909.6531262397766
+                },
+                "Meta_Train_CRF": {
+                        "lang": "de",
+                        "name": "pipeline",
+                        "version": "0.0.0",
+                        "spacy_version": ">=3.5.3,<3.6.0",
+                        "description": "",
+                        "author": "",
+                        "email": "",
+                        "url": "",
+                        "license": "",
+                        "spacy_git_version": "Unknown",
+                        "vectors": {
+                                "width": 0,
+                                "vectors": 0,
+                                "keys": 0,
+                                "name": null,
+                                "mode": "default"
+                        },
+                        "labels": {
+                                "tok2vec": [],
+                                "ner": [
+                                        "B-LOC",
+                                        "B-ORG",
+                                        "B-PER",
+                                        "I-LOC",
+                                        "I-ORG",
+                                        "I-PER"
+                                ]
+                        },
+                        "pipeline": [
+                                "tok2vec",
+                                "ner"
+                        ],
+                        "components": [
+                                "tok2vec",
+                                "ner"
+                        ],
+                        "disabled": [],
+                        "performance": {
+                                "ents_f": 0.0890240255,
+                                "ents_p": 0.0581834767,
+                                "ents_r": 0.1894357234,
+                                "ents_per_type": {
+                                        "B-PER": {
+                                                "p": 0.0141793182,
+                                                "r": 0.0841836735,
+                                                "f": 0.0242706546
+                                        },
+                                        "B-ORG": {
+                                                "p": 0.0672594988,
+                                                "r": 0.5036319613,
+                                                "f": 0.1186706604
+                                        },
+                                        "B-LOC": {
+                                                "p": 0.216108453,
+                                                "r": 0.2094281298,
+                                                "f": 0.2127158556
+                                        },
+                                        "I-ORG": {
+                                                "p": 0.1515580737,
+                                                "r": 0.1857638889,
+                                                "f": 0.1669266771
+                                        },
+                                        "I-PER": {
+                                                "p": 0.0,
+                                                "r": 0.0,
+                                                "f": 0.0
+                                        },
+                                        "I-LOC": {
+                                                "p": 0.0,
+                                                "r": 0.0,
+                                                "f": 0.0
+                                        }
+                                },
+                                "tok2vec_loss": 633.2159220821,
+                                "ner_loss": 10933.8956765489
+                        }
+                },
+                "Train_TRF": {
+                        "Output": "\u001b[38;5;4m\u2139 Saving to output directory: ../result/model_trf/comb_germaner\u001b[0m\n\u001b[38;5;4m\u2139 Using GPU: 0\u001b[0m\n\u001b[1m\n=========================== Initializing pipeline ===========================\u001b[0m\n\u001b[38;5;2m\u2714 Initialized pipeline\u001b[0m\n\u001b[1m\n============================= Training pipeline =============================\u001b[0m\n\u001b[38;5;4m\u2139 Pipeline: ['transformer', 'ner']\u001b[0m\n\u001b[38;5;4m\u2139 Initial learn rate: 0.0\u001b[0m\nE    #       LOSS TRANS...  LOSS NER  ENTS_F  ENTS_P  ENTS_R  SCORE \n---  ------  -------------  --------  ------  ------  ------  ------\n  0       0          91.64    197.83    3.37    1.81   24.37    0.03\n  0     200       29386.27  68949.24   10.00    6.56   21.00    0.10\n  0     400        6900.68  22774.34   11.63    7.47   26.24    0.12\n  0     600        5380.54  18918.09   12.37    7.97   27.62    0.12\n  0     800        4514.70  16131.37   14.09    9.08   31.46    0.14\n  0    1000        3995.34  14886.28   13.47    8.63   30.63    0.13\n  0    1200        3631.94  13836.48   13.07    8.48   28.51    0.13\n  0    1400        3320.45  12950.78   13.72    8.86   30.40    0.14\n  0    1600        2954.79  11994.38   13.97    9.07   30.31    0.14\n  0    1800        2822.70  11230.00   12.01    7.75   26.75    0.12\n  0    2000        2667.14  10976.08   13.96    9.03   30.78    0.14\n  0    2200        2557.77  10408.37   14.19    9.17   31.37    0.14\n  0    2400        2569.37  10409.24   13.57    8.72   30.57    0.14\n  0    2600        2415.97  10113.77   14.05    8.94   32.80    0.14\n  0    2800        2213.50   9215.93   13.53    8.68   30.70    0.14\n  0    3000        2161.49   9273.91   13.33    8.59   29.78    0.13\n  0    3200        2058.13   9016.29   13.87    8.94   30.93    0.14\n  0    3400        1905.15   8562.37   13.67    8.72   31.67    0.14\n  0    3600        1964.98   8407.32   12.30    7.91   27.70    0.12\n  0    3800        1711.67   7589.06   14.22    9.20   31.31    0.14\n  0    4000        1780.46   7625.73   13.76    8.86   30.78    0.14\n  0    4200        1603.38   7016.09   13.18    8.42   30.38    0.13\n  0    4400        1603.14   7133.65   13.61    8.74   30.76    0.14\n  0    4600        1721.22   7168.42   13.55    8.71   30.48    0.14\n  0    4800        1641.25   6742.02   14.03    9.01   31.63    0.14\n  0    5000        1548.27   6506.04   14.59    9.35   33.20    0.15\n  0    5200        1572.47   6468.22   14.22    9.14   32.03    0.14\n  0    5400        1421.93   5769.89   13.14    8.51   28.83    0.13\n  0    5600        1418.59   5701.65   13.90    8.99   30.70    0.14\n  0    5800        1450.44   5579.10   14.91    9.60   33.45    0.15\n  0    6000        1409.79   5254.23   14.37    9.27   32.01    0.14\n  0    6200        1343.80   5029.26   13.24    8.46   30.46    0.13\n  0    6400        1262.58   4673.17   13.24    8.50   29.87    0.13\n  0    6600        1358.60   4667.84   13.88    8.88   31.74    0.14\n  0    6800        1238.11   4312.11   13.46    8.69   29.78    0.13\n  0    7000        1269.79   4150.93   13.53    8.68   30.63    0.14\n  0    7200        1251.23   3904.89   14.30    9.21   32.03    0.14\n  0    7400        1169.86   3672.66   13.94    8.89   32.31    0.14\n\u001b[38;5;2m\u2714 Saved pipeline to output directory\u001b[0m\n../result/model_trf/comb_germaner/model-last\n",
+                        "Dauer": 5763.862463951111
+                },
+                "Meta_Train_TRF": {
+                        "lang": "de",
+                        "name": "pipeline",
+                        "version": "0.0.0",
+                        "spacy_version": ">=3.5.3,<3.6.0",
+                        "description": "",
+                        "author": "",
+                        "email": "",
+                        "url": "",
+                        "license": "",
+                        "spacy_git_version": "Unknown",
+                        "vectors": {
+                                "width": 0,
+                                "vectors": 0,
+                                "keys": 0,
+                                "name": null,
+                                "mode": "default"
+                        },
+                        "labels": {
+                                "transformer": [],
+                                "ner": [
+                                        "B-LOC",
+                                        "B-ORG",
+                                        "B-PER",
+                                        "I-LOC",
+                                        "I-ORG",
+                                        "I-PER"
+                                ]
+                        },
+                        "pipeline": [
+                                "transformer",
+                                "ner"
+                        ],
+                        "components": [
+                                "transformer",
+                                "ner"
+                        ],
+                        "disabled": [],
+                        "performance": {
+                                "ents_f": 0.149146451,
+                                "ents_p": 0.0959654354,
+                                "ents_r": 0.3345354264,
+                                "ents_per_type": {
+                                        "B-PER": {
+                                                "p": 0.0346060346,
+                                                "r": 0.2057823129,
+                                                "f": 0.059248378
+                                        },
+                                        "B-ORG": {
+                                                "p": 0.0872180451,
+                                                "r": 0.7021791768,
+                                                "f": 0.1551631889
+                                        },
+                                        "B-LOC": {
+                                                "p": 0.3067708333,
+                                                "r": 0.4551777434,
+                                                "f": 0.3665214686
+                                        },
+                                        "I-PER": {
+                                                "p": 0.0213903743,
+                                                "r": 0.0058651026,
+                                                "f": 0.0092059839
+                                        },
+                                        "I-ORG": {
+                                                "p": 0.25,
+                                                "r": 0.2795138889,
+                                                "f": 0.2639344262
+                                        },
+                                        "I-LOC": {
+                                                "p": 0.0256410256,
+                                                "r": 0.00625,
+                                                "f": 0.0100502513
+                                        }
+                                },
+                                "transformer_loss": 1450.4364345019,
+                                "ner_loss": 5579.1028997948
+                        }
+                },
+                "Evaluation_CRF": {
+                        "Output": "\u001b[38;5;4m\u2139 Using CPU\u001b[0m\n\u001b[38;5;4m\u2139 To switch to GPU 0, use the option: --gpu-id 0\u001b[0m\n\u001b[1m\n================================== Results ==================================\u001b[0m\n\nTOK     100.00\nNER P   5.67  \nNER R   18.99 \nNER F   8.74  \nSPEED   22452 \n\n\u001b[1m\n=============================== NER (per type) ===============================\u001b[0m\n\n            P       R       F\nB-ORG    6.23   47.83   11.03\nI-ORG   13.90   17.63   15.54\nB-PER    1.41    8.50    2.42\nI-PER    0.00    0.00    0.00\nB-LOC   24.96   21.79   23.26\nI-LOC    0.00    0.00    0.00\n\n",
+                        "Dauer": 16.218184232711792
+                },
+                "Evaluation_TRF": {
+                        "Output": "\u001b[38;5;4m\u2139 Using GPU: 0\u001b[0m\n\u001b[1m\n================================== Results ==================================\u001b[0m\n\nTOK     100.00\nNER P   9.88  \nNER R   35.29 \nNER F   15.44 \nSPEED   9645  \n\n\u001b[1m\n=============================== NER (per type) ===============================\u001b[0m\n\n            P       R       F\nB-PER    3.54   21.33    6.07\nB-ORG    8.51   68.12   15.13\nB-LOC   33.62   50.38   40.33\nI-PER    0.47    0.16    0.24\nI-ORG   24.22   28.06   26.00\nI-LOC    3.57    0.71    1.18\n\n",
+                        "Dauer": 23.69125461578369
+                },
+                "TestModel_CRF": {
+                        "Dataset": "comb_germaner",
+                        "Modell": "crf",
+                        "Satz": "Hallo ich hei\u00dfe ditschiu Louis aus Griechenland Spanien",
+                        "Entities": "(Hallo, Louis, Griechenland, Spanien)",
+                        "AnzahlEntities": 4,
+                        "EntitiesLabel": [
+                                "Entity 1: Hallo, B-ORG",
+                                "Entity 2: Louis, B-ORG",
+                                "Entity 3: Griechenland, B-PER",
+                                "Entity 4: Spanien, B-LOC"
+                        ]
+                },
+                "TestModel_TRF": {
+                        "Dataset": "comb_germaner",
+                        "Modell": "trf",
+                        "Satz": "Hallo ich hei\u00dfe ditschiu Louis aus Griechenland Spanien",
+                        "Entities": "(Louis, Griechenland, Spanien)",
+                        "AnzahlEntities": 3,
+                        "EntitiesLabel": [
+                                "Entity 1: Louis, B-LOC",
+                                "Entity 2: Griechenland, B-LOC",
+                                "Entity 3: Spanien, B-PER"
+                        ]
+                }
+        }
+]
